@@ -1,6 +1,6 @@
 # EYESY_OS_RasPi
 
-# THIS IS BASED ON OKYERONS REPO WITH SLIGHT MODIFICATIONS TO MAKE IT RUN ON A RASPBERRY PI 4
+## THIS IS BASED ON OKYERONS REPO WITH SLIGHT MODIFICATIONS TO MAKE IT RUN ON A RASPBERRY PI 4
 
 The operating system for the EYESY video synthesizer device - remixed.
 
@@ -13,13 +13,17 @@ Eyesy Manual : https://www.critterandguitari.com/manual?m=EYESY_Manual#eyesy%E2%
 
 - inastall "Raspberry Pi OS with desktop" from [here](https://www.raspberrypi.org/software/operating-systems/#raspberry-pi-os-32-bit) (currently not possible to make it work with OS lite)
 - follow the original instructions
-- change the alsa settings (cf. [here](https://learn.adafruit.com/usb-audio-cards-with-a-raspberry-pi/updating-alsa-config))
-
 ```
 git clone https://github.com/BeatRossmy/EYESY_OS_for_RasPi.git Eyesy
 cd Eyesy
 ./deploy.sh
  ```
+- change the alsa settings (cf. [here](https://learn.adafruit.com/usb-audio-cards-with-a-raspberry-pi/updating-alsa-config))
+```
+sudo nano /usr/share/alsa/alsa.conf 
+```
+
+
   
 ### Usage:
  - Connect a display to the first hdmi out
