@@ -22,6 +22,10 @@ cd Eyesy
 ```
 sudo nano /usr/share/alsa/alsa.conf 
 ```
+```
+defaults.ctl.card ~~0~~ 2
+defaults.pcm.card ~~0~~ 2
+```
   
 ### Usage:
  - Connect a display to the first hdmi out
