@@ -18,12 +18,10 @@ git clone https://github.com/BeatRossmy/EYESY_OS_for_RasPi.git Eyesy
 cd Eyesy
 ./deploy.sh
  ```
-- change the alsa settings (cf. [here](https://learn.adafruit.com/usb-audio-cards-with-a-raspberry-pi/updating-alsa-config))
+- change the alsa settings (cf. [here](https://learn.adafruit.com/usb-audio-cards-with-a-raspberry-pi/updating-alsa-config) (try card #2, since #1 is probably the HDMI audio out)
 ```
 sudo nano /usr/share/alsa/alsa.conf 
 ```
-
-
   
 ### Usage:
  - Connect a display to the first hdmi out
