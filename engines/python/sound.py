@@ -73,8 +73,12 @@ def recv() :
                 avg_r += data_r[3 * i + j]
             else:
                 if l > 0:
-                    avg_l +=audioop.getsample(ldata, 2, (i * 3) + j)
-                    avg_r +=audioop.getsample(rdata, 2, (i * 3) + j)
+                    # the following 2 lines crashed the python engine -> optimize alsa settings? probably wrong buffer size?
+                    # avg_l +=audioop.getsample(ldata, 2, (i * 3) + j)
+                    # avg_r +=audioop.getsample(rdata, 2, (i * 3) + j)
+                    # this is not a solution, only a fix
+                    avg_l = avg_l
+                    avg_r = avg_r
     # except :
     #     pass
 
